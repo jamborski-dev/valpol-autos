@@ -11,6 +11,9 @@
   --gray-bg: #e4e4e4;
 
   --max-width: min(65%, 80%);
+
+  scroll-behavior: smooth;
+
 }
 
 * {
@@ -86,9 +89,6 @@ p {
   line-height: 1.75rem;
 }
 
-.app {
-  scroll-behavior: smooth;
-}
 .horizontal-3dots-spacer {
   --size: 7px;
 
