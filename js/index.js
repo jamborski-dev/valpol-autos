@@ -1,3 +1,5 @@
+// Hanling Inputs
+
 const inputs = document.querySelectorAll('input');
 
 inputs.forEach(input => {
@@ -8,7 +10,25 @@ inputs.forEach(input => {
   })
 })
 
-const firstSection = document.getElementById('bussiness');
-const startScrollObserver = new IntersectionObserver(() => console.log('hi there'));
 
-startScrollObserver.observe(firstSection);
+// Intersection Observer
+const bussinessSection = document.getElementById('bussiness');
+
+const onEntry = (entries) => {
+  entries.forEach(entry => { 
+    if(entry.isIntersecting) {
+      const nav = document.getElementById('nav');
+      nav.classList.add('sticky');
+    }
+  })
+}
+
+const observerOptions = {
+  root: null,
+  rootMargin: '-100px',
+  theshold: 0
+}
+
+const observer = new IntersectionObserver(onEntry, observerOptions);
+
+observer.observe(bussinessSection);

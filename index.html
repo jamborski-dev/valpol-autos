@@ -9,7 +9,7 @@
   </head>
   <body>
     <div class="app">
-      <nav>
+      <nav id="nav">
         <ul class="flex-center menu">
           <li>
             <a href="#home" class="active">Home</a>
@@ -32,8 +32,7 @@
           <li class="lang-menu"><a href="#">EN</a></li>
         </ul>
       </nav>
-      <div class="scroll-container">
-        <section id="home" class="hero">
+      <section id="home" class="hero">
           <div class="overlay"></div>
           <div class="hero__content">
             <div class="logo">
@@ -119,293 +118,296 @@
                 dolore nobis quod autem qui non sint officiis reiciendis iure
                 ducimus.
               </p>
-              <button class="btn btn-primary">KONTAKT</button>
+              <a href="#contact">
+                <button class="btn btn-primary">KONTAKT</button>
+              </a>
             </div>
             <div class="scroll-down">
-              <span>
-                Przejdź w dół
-              </span>
-              <span class="icon">
-                <svg
-                  id="Layer_2"
-                  data-name="Layer 2"
-                  width="45.878"
-                  height="36.385"
-                  viewBox="0 0 45.878 36.385"
-                >
-                  <g id="Layer_3" data-name="Layer 3" transform="translate(0 0)">
-                    <rect
-                      id="Rectangle_1"
-                      data-name="Rectangle 1"
-                      width="15.456"
-                      height="1.95"
-                      transform="translate(32.248 0) rotate(28.14)"
-                      fill="#ffdc10"
-                    />
-                    <rect
-                      id="Rectangle_3"
-                      data-name="Rectangle 3"
-                      width="15.456"
-                      height="0.721"
-                      transform="translate(30.373 3.503) rotate(28.14)"
-                      fill="#ffdc10"
-                    />
-                    <path
-                      id="Path_2"
-                      data-name="Path 2"
-                      d="M67.376,11.7,63.05,19.789l1.72.918L66.381,17.7l10.191,5.45-1.611,3.005,1.72.922,4.326-8.089Zm4.769,8.25a2.167,2.167,0,1,1,2.417-.725A2.167,2.167,0,0,1,72.146,19.95Z"
-                      transform="translate(-37.65 -6.987)"
-                      fill="#ffdc10"
-                    />
-                    <path
-                      id="Path_3"
-                      data-name="Path 3"
-                      d="M65.508,34.446l-1.362-.729L62.784,33,51.2,51.933a2.83,2.83,0,1,0,5,2.655ZM52.617,55.3a8.742,8.742,0,1,1-.012,0Z"
-                      transform="translate(-30.375 -19.707)"
-                      fill="#ffdc10"
-                    />
-                    <rect
-                      id="Rectangle_4"
-                      data-name="Rectangle 4"
-                      width="15.456"
-                      height="1.95"
-                      transform="matrix(-0.867, 0.498, -0.498, -0.867, 14.377, 1.974)"
-                      fill="#ffdc10"
-                    />
-                    <rect
-                      id="Rectangle_6"
-                      data-name="Rectangle 6"
-                      width="15.456"
-                      height="0.721"
-                      transform="matrix(-0.867, 0.498, -0.498, -0.867, 15.745, 4.361)"
-                      fill="#ffdc10"
-                    />
-                    <path
-                      id="Path_5"
-                      data-name="Path 5"
-                      d="M6.6,19.91l4.564,7.956,1.692-.967-1.7-2.961,10.026-5.764,1.688,2.973,1.7-.959L20.01,12.22Zm6.469.044a2.167,2.167,0,1,1,2.417.653,2.167,2.167,0,0,1-2.417-.653Z"
-                      transform="translate(-3.939 -7.298)"
-                      fill="#ffdc10"
-                    />
-                    <path
-                      id="Path_6"
-                      data-name="Path 6"
-                      d="M37.115,55.068a2.833,2.833,0,1,0,4.914-2.82L29.893,33.67l-1.341.769-1.341.769Zm.447-.258A2.316,2.316,0,1,1,38.968,55.9,2.32,2.32,0,0,1,37.563,54.81Z"
-                      transform="translate(-16.247 -20.107)"
-                      fill="#ffdc10"
-                    />
-                  </g>
-                </svg>
-              </span>
+              <a href="#bussiness">
+                <span>
+                  Przejdź w dół
+                </span>
+                <span class="icon">
+                  <svg
+                    id="Layer_2"
+                    data-name="Layer 2"
+                    width="45.878"
+                    height="36.385"
+                    viewBox="0 0 45.878 36.385"
+                  >
+                    <g id="Layer_3" data-name="Layer 3" transform="translate(0 0)">
+                      <rect
+                        id="Rectangle_1"
+                        data-name="Rectangle 1"
+                        width="15.456"
+                        height="1.95"
+                        transform="translate(32.248 0) rotate(28.14)"
+                        fill="#ffdc10"
+                      />
+                      <rect
+                        id="Rectangle_3"
+                        data-name="Rectangle 3"
+                        width="15.456"
+                        height="0.721"
+                        transform="translate(30.373 3.503) rotate(28.14)"
+                        fill="#ffdc10"
+                      />
+                      <path
+                        id="Path_2"
+                        data-name="Path 2"
+                        d="M67.376,11.7,63.05,19.789l1.72.918L66.381,17.7l10.191,5.45-1.611,3.005,1.72.922,4.326-8.089Zm4.769,8.25a2.167,2.167,0,1,1,2.417-.725A2.167,2.167,0,0,1,72.146,19.95Z"
+                        transform="translate(-37.65 -6.987)"
+                        fill="#ffdc10"
+                      />
+                      <path
+                        id="Path_3"
+                        data-name="Path 3"
+                        d="M65.508,34.446l-1.362-.729L62.784,33,51.2,51.933a2.83,2.83,0,1,0,5,2.655ZM52.617,55.3a8.742,8.742,0,1,1-.012,0Z"
+                        transform="translate(-30.375 -19.707)"
+                        fill="#ffdc10"
+                      />
+                      <rect
+                        id="Rectangle_4"
+                        data-name="Rectangle 4"
+                        width="15.456"
+                        height="1.95"
+                        transform="matrix(-0.867, 0.498, -0.498, -0.867, 14.377, 1.974)"
+                        fill="#ffdc10"
+                      />
+                      <rect
+                        id="Rectangle_6"
+                        data-name="Rectangle 6"
+                        width="15.456"
+                        height="0.721"
+                        transform="matrix(-0.867, 0.498, -0.498, -0.867, 15.745, 4.361)"
+                        fill="#ffdc10"
+                      />
+                      <path
+                        id="Path_5"
+                        data-name="Path 5"
+                        d="M6.6,19.91l4.564,7.956,1.692-.967-1.7-2.961,10.026-5.764,1.688,2.973,1.7-.959L20.01,12.22Zm6.469.044a2.167,2.167,0,1,1,2.417.653,2.167,2.167,0,0,1-2.417-.653Z"
+                        transform="translate(-3.939 -7.298)"
+                        fill="#ffdc10"
+                      />
+                      <path
+                        id="Path_6"
+                        data-name="Path 6"
+                        d="M37.115,55.068a2.833,2.833,0,1,0,4.914-2.82L29.893,33.67l-1.341.769-1.341.769Zm.447-.258A2.316,2.316,0,1,1,38.968,55.9,2.32,2.32,0,0,1,37.563,54.81Z"
+                        transform="translate(-16.247 -20.107)"
+                        fill="#ffdc10"
+                      />
+                    </g>
+                  </svg>
+                </span>
+              </a>
             </div>
           </div>
-        </section>
-        <section id="bussiness" class="bussiness">
-          <main class="content cols">
+      </section>
+      <section id="bussiness" class="bussiness">
+        <main class="content cols">
+          <div class="col">
+            <h2>Biznes z rodzinną historią</h2>
+            <span class="horizontal-3dots-spacer"></span>
+            <p>
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Odit
+              eveniet illum dolore quod voluptates maxime voluptate quasi eum
+              maiores porro dolores, cum suscipit asperiores nobis. Obcaecati
+              quia veniam quasi. Sapiente?
+            </p>
+          </div>
+          <div class="col">
+            <div class="img-container">
+              <img src="./assets/yellow-mini.jpg" alt="Yellow Mini Cooper in front of a block" sizes="" srcset="" />
+            </div>
+          </div>
+        </main>
+      </section>
+      <section id="services" class="services">
+        <div class="content">
+          <h2>Szeroka gama usług</h2>
+          <span class="horizontal-3dots-spacer center"></span>
+          <div class="cols">
             <div class="col">
-              <h2>Biznes z rodzinną historią</h2>
-              <span class="horizontal-3dots-spacer"></span>
+              <h4>Mechnika pojazdowa</h4>
+              <span class="icon"><i class="fas fa-wrench"></i></span>
               <p>
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Odit
-                eveniet illum dolore quod voluptates maxime voluptate quasi eum
-                maiores porro dolores, cum suscipit asperiores nobis. Obcaecati
-                quia veniam quasi. Sapiente?
+                Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                Quaerat, doloribus perferendis assumenda ipsam in incidunt.
               </p>
             </div>
             <div class="col">
-              <div class="img-container">
-                <img src="./assets/yellow-mini.jpg" alt="Yellow Mini Cooper in front of a block" sizes="" srcset="" />
-              </div>
+              <h4>Przygotowanie do MOT</h4>
+              <span class="icon"><i class="fas fa-tasks"></i></span>
+              <p>
+                Lorem, ipsum dolor sit amet consectetur adipisicing elit. Eum,
+                atque.
+              </p>
             </div>
-          </main>
-        </section>
-        <section id="services" class="services">
-          <div class="content">
-            <h2>Szeroka gama usług</h2>
-            <span class="horizontal-3dots-spacer center"></span>
-            <div class="cols">
-              <div class="col">
-                <h4>Mechnika pojazdowa</h4>
-                <span class="icon"><i class="fas fa-wrench"></i></span>
-                <p>
-                  Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                  Quaerat, doloribus perferendis assumenda ipsam in incidunt.
-                </p>
-              </div>
-              <div class="col">
-                <h4>Przygotowanie do MOT</h4>
-                <span class="icon"><i class="fas fa-tasks"></i></span>
-                <p>
-                  Lorem, ipsum dolor sit amet consectetur adipisicing elit. Eum,
-                  atque.
-                </p>
-              </div>
-              <div class="col">
-                <h4>Doradztwo</h4>
-                <span class="icon">
-                  <i class="fas fa-graduation-cap"></i>
-                </span>
-                <p>
-                  Lorem ipsum dolor sit, amet consectetur adipisicing elit. Unde
-                  eligendi saepe cupiditate omnis libero esse quo sapiente
-                  doloribus reprehenderit!
-                </p>
-              </div>
-            </div>
-          </div>
-        </section>
-        <section id="reviews" class="reviews">
-          <div class="content">
-            <h2>
-              <span class="color-accent bold">100%</span> zawodowolonych klientów
-            </h2>
-            <div class="grid">
-                
-              <!-- sample review -->
-                <article>
-                  <div class="avatar-container">
-                    <img alt="profile picture" src="assets/avatar-4.jpg" />
-                  </div>
-                  <header>
-                    <span class="review__meta">
-                      <time>03.10.2020</time>
-                      <span>Northampton</span>
-                    </span>
-                    <span>Jan Kowalski</span>
-                  </header>
-                  <p class="review__content">
-                    Lorem ipsum dolor sit amet consectetur, adipisicing elit. Sunt
-                    quidem molestiae quasi, neque tempore nesciunt adipisci
-                    similique ab doloremque consequatur.
-                  </p>
-                </article>
-                
-                <!-- sample review -->
-                <article>
-                  <div class="avatar-container">
-                    <img alt="profile picture" src="assets/avatar-1.jpg" />
-                  </div>
-                  <header>
-                    <span class="review__meta">
-                      <time>03.10.2020</time>
-                      <span>Northampton</span>
-                    </span>
-                    <span>Jan Kowalski</span>
-                  </header>
-                  <p class="review__content">
-                    Lorem ipsum dolor, sit amet consectetur adipisicing elit. Hic
-                    quam repellendus tempora saepe distinctio mollitia deserunt
-                    qui, maxime voluptate libero. Molestiae, dolor doloremque
-                    voluptas minima iure minus optio tempora obcaecati aliquid
-                    articleestias quibusdam ullam, eum illum debitis dolores
-                    voluptatem non?
-                  </p>
-                </article>
-                
-                  <!-- sample review -->
-                <article>
-                  <div class="avatar-container">
-                    <img alt="profile picture" src="assets/avatar-2.jpg" />
-                  </div>
-                  <header>
-                    <span class="review__meta">
-                      <time>03.10.2020</time>
-                      <span>Northampton</span>
-                    </span>
-                    <span>Jan Kowalski</span>
-                  </header>
-                  <p class="review__content">
-                    Molestiae, dolor doloremque voluptas minima iure minus optio
-                    tempora obcaecati aliquid molestias quibusdam ullam, eum illum
-                    debitis dolores voluptatem non?
-                  </p>
-                </article>
-                
-                <!-- sample review -->
-                <article>
-                  <div class="avatar-container">
-                    <img alt="profile picture" src="assets/avatar-3.jpg" />
-                  </div>
-                  <header>
-                    <span class="review__meta">
-                      <time>03.10.2020</time>
-                      <span>Northampton</span>
-                    </span>
-                    <span>Jan Kowalski</span>
-                  </header>
-                  <p class="review__content">
-                    Doloremque voluptas minima iure minus optio tempora obcaecati
-                    aliquid molestias quibusdam ullam, eum illum debitis dolores
-                    voluptatem non?
-                  </p>
-                </article>
-              
-            </div> <!-- .cols -->
-          </div> <!-- .content -->
-        </section>
-        <section id="contact" class="contact">
-          <div class="grid">
-            <header  class="form__header">
-              <h2>Skontaktuj się</h2>
-              <small>Wycena w ciągu 24h</small>
-            </header>
-            <section class="form">
-              <form method="post" autocomplete="off">
-                <div class="form-group">
-                  <input type="text" name="name" id="" />
-                  <label for="name">Imię</label>
-                </div>
-                <div class="form-group">
-                  <input type="text" name="phone" id="" />
-                  <label for="phone">Telefon kontaktowy</label>
-                </div>
-                <div class="form-group">
-                  <input type="text" name="email" id="" />
-                  <label for="email">Adres email</label>
-                </div>
-                <div class="form-group">
-                  <input type="text" name="message" id="message" />
-                  <label for="message">Treść wiadomości</label>
-                </div>
-                <input type="button" value="WYŚLIJ ZAPYTANIE" />
-              </form>
-            </section>
-            <header class="details__header">
-              <h2>Valpol Autos Ltd</h2>
-              <small>Mechanika pojazdowa, serwis, doradztwo</small>
-            </header>
-            <section class="details__content">
-              <div class="contact-details">
-                <ul>
-                  <li>
-                    <span class="icon"></span>Northampton, Adress Line 1, NN1 3XX
-                  </li>
-                  <li><span class="icon">07758 999 888</span></li>
-                  <li><span class="icon">Valpol Autos Ltd on Facebook</span></li>
-                </ul>
-              </div>
-              <span class="disclaimer">
-                Lorem, ipsum dolor sit amet consectetur adipisicing elit. Modi
-                deserunt rem eos at, unde alias? Dolores veniam nesciunt dolorum.
+            <div class="col">
+              <h4>Doradztwo</h4>
+              <span class="icon">
+                <i class="fas fa-graduation-cap"></i>
               </span>
-            </section>
+              <p>
+                Lorem ipsum dolor sit, amet consectetur adipisicing elit. Unde
+                eligendi saepe cupiditate omnis libero esse quo sapiente
+                doloribus reprehenderit!
+              </p>
+            </div>
           </div>
-        </section>
-        <footer>
-          <span class="copy">
-            All rights reserved 
-            <span class="no-break">
-              &copy; 2020 Valpol Autos Ltd
+        </div>
+      </section>
+      <section id="reviews" class="reviews">
+        <div class="content">
+          <h2>
+            <span class="color-accent bold">100%</span> zawodowolonych klientów
+          </h2>
+          <div class="grid">
+              
+            <!-- sample review -->
+              <article>
+                <div class="avatar-container">
+                  <img alt="profile picture" src="assets/avatar-4.jpg" />
+                </div>
+                <header>
+                  <span class="review__meta">
+                    <time>03.10.2020</time>
+                    <span>Northampton</span>
+                  </span>
+                  <span>Jan Kowalski</span>
+                </header>
+                <p class="review__content">
+                  Lorem ipsum dolor sit amet consectetur, adipisicing elit. Sunt
+                  quidem molestiae quasi, neque tempore nesciunt adipisci
+                  similique ab doloremque consequatur.
+                </p>
+              </article>
+              
+              <!-- sample review -->
+              <article>
+                <div class="avatar-container">
+                  <img alt="profile picture" src="assets/avatar-1.jpg" />
+                </div>
+                <header>
+                  <span class="review__meta">
+                    <time>03.10.2020</time>
+                    <span>Northampton</span>
+                  </span>
+                  <span>Jan Kowalski</span>
+                </header>
+                <p class="review__content">
+                  Lorem ipsum dolor, sit amet consectetur adipisicing elit. Hic
+                  quam repellendus tempora saepe distinctio mollitia deserunt
+                  qui, maxime voluptate libero. Molestiae, dolor doloremque
+                  voluptas minima iure minus optio tempora obcaecati aliquid
+                  articleestias quibusdam ullam, eum illum debitis dolores
+                  voluptatem non?
+                </p>
+              </article>
+              
+                <!-- sample review -->
+              <article>
+                <div class="avatar-container">
+                  <img alt="profile picture" src="assets/avatar-2.jpg" />
+                </div>
+                <header>
+                  <span class="review__meta">
+                    <time>03.10.2020</time>
+                    <span>Northampton</span>
+                  </span>
+                  <span>Jan Kowalski</span>
+                </header>
+                <p class="review__content">
+                  Molestiae, dolor doloremque voluptas minima iure minus optio
+                  tempora obcaecati aliquid molestias quibusdam ullam, eum illum
+                  debitis dolores voluptatem non?
+                </p>
+              </article>
+              
+              <!-- sample review -->
+              <article>
+                <div class="avatar-container">
+                  <img alt="profile picture" src="assets/avatar-3.jpg" />
+                </div>
+                <header>
+                  <span class="review__meta">
+                    <time>03.10.2020</time>
+                    <span>Northampton</span>
+                  </span>
+                  <span>Jan Kowalski</span>
+                </header>
+                <p class="review__content">
+                  Doloremque voluptas minima iure minus optio tempora obcaecati
+                  aliquid molestias quibusdam ullam, eum illum debitis dolores
+                  voluptatem non?
+                </p>
+              </article>
+            
+          </div> <!-- .cols -->
+        </div> <!-- .content -->
+      </section>
+      <section id="contact" class="contact">
+        <div class="grid">
+          <header  class="form__header">
+            <h2>Skontaktuj się</h2>
+            <small>Wycena w ciągu 24h</small>
+          </header>
+          <section class="form">
+            <form method="post" autocomplete="off">
+              <div class="form-group">
+                <input type="text" name="name" id="" />
+                <label for="name">Imię</label>
+              </div>
+              <div class="form-group">
+                <input type="text" name="phone" id="" />
+                <label for="phone">Telefon kontaktowy</label>
+              </div>
+              <div class="form-group">
+                <input type="text" name="email" id="" />
+                <label for="email">Adres email</label>
+              </div>
+              <div class="form-group">
+                <input type="text" name="message" id="message" />
+                <label for="message">Treść wiadomości</label>
+              </div>
+              <input type="button" value="WYŚLIJ ZAPYTANIE" />
+            </form>
+          </section>
+          <header class="details__header">
+            <h2>Valpol Autos Ltd</h2>
+            <small>Mechanika pojazdowa, serwis, doradztwo</small>
+          </header>
+          <section class="details__content">
+            <div class="contact-details">
+              <ul>
+                <li>
+                  <span class="icon"></span>Northampton, Adress Line 1, NN1 3XX
+                </li>
+                <li><span class="icon">07758 999 888</span></li>
+                <li><span class="icon">Valpol Autos Ltd on Facebook</span></li>
+              </ul>
+            </div>
+            <span class="disclaimer">
+              Lorem, ipsum dolor sit amet consectetur adipisicing elit. Modi
+              deserunt rem eos at, unde alias? Dolores veniam nesciunt dolorum.
             </span>
+          </section>
+        </div>
+      </section>
+      <footer>
+        <span class="copy">
+          All rights reserved 
+          <span class="no-break">
+            &copy; 2020 Valpol Autos Ltd
           </span>
-          <span class="dev">
-            Design & Implementation<br />
-            <span class="no-break">
-              <a href="#">Robert Jamborski</a>
-            </span>
+        </span>
+        <span class="dev">
+          Design & Implementation<br />
+          <span class="no-break">
+            <a href="#">Robert Jamborski</a>
           </span>
-        </footer>
-      </div>
+        </span>
+      </footer>
     </div>
     <script src="./js/index.js"></script>
   </body>
