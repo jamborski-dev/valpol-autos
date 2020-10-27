@@ -13,7 +13,6 @@
   --max-width: min(65%, 80%);
 
   scroll-behavior: smooth;
-
 }
 
 * {
@@ -47,7 +46,7 @@ a {
   &.block-link {
     color: inherit;
 
-    &:hover {
+    :hover {
       border: none;
     }
   }

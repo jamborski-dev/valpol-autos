@@ -45,7 +45,7 @@ a.block-link {
   color: inherit;
 }
 
-a.block-link:hover {
+a.block-link :hover {
   border: none;
 }
 

@@ -12,23 +12,25 @@ inputs.forEach(input => {
 
 
 // Intersection Observer
-const bussinessSection = document.getElementById('bussiness');
+const hero = document.getElementById('home');
 
 const onEntry = (entries) => {
   entries.forEach(entry => { 
+    const nav = document.getElementById('nav');
     if(entry.isIntersecting) {
-      const nav = document.getElementById('nav');
-      nav.classList.add('sticky');
+      nav.classList.remove('sticky');
+    } else {
+      nav.classList.add('sticky');  
     }
   })
 }
 
 const observerOptions = {
   root: null,
-  rootMargin: '-100px',
-  theshold: 0
+  rootMargin: '-80% 0px 0px 0px',
+  theshold: []
 }
 
 const observer = new IntersectionObserver(onEntry, observerOptions);
 
-observer.observe(bussinessSection);
+observer.observe(hero);
