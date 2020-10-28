@@ -27,7 +27,7 @@ const onEntry = (entries) => {
 
 const observerOptions = {
   root: null,
-  rootMargin: '-80% 0px 0px 0px',
+  rootMargin: '-85% 0px 0px 0px',
   theshold: []
 }
 

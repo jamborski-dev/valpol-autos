@@ -52,7 +52,18 @@ a {
   }
 }
 
-button, input[type='button'] {
+svg {
+  &.icon {
+    --size: 30px;
+    width: var(--size);
+    height: var(--size);
+
+    fill: var(--accent);
+    stroke: none;
+  }
+}
+
+button, input[type='button'], a.button {
   border: none;
   background: var(--accent);
   color: var(--dark-bg);
@@ -62,8 +73,14 @@ button, input[type='button'] {
   border-radius: 3rem;
   cursor: pointer;
 
+  transition: transform .3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+
   &:focus {
     outline: 1px dotted rgba(255, 255, 0, 0.4);
+  }
+
+  &:active {
+    transform: scale(0.9);
   }
 }
 
@@ -260,19 +277,24 @@ section {
 
       > .scroll-down {
         position: absolute;
-        right: 1rem;
-        bottom: 1rem;
+        right: 2rem;
+        bottom: 2rem;
+        font-size: 0.85rem;
+        opacity: 0.7;
+        transition: opacity .3s ease;
 
         display: flex;
+        flex-flow: column nowrap;
         align-items: center;
 
-        > span:first-child {
-          margin-right: 1rem;
+        > svg {
+          margin-bottom: .25rem;
+          width: 45px;
+          height: 45px;
         }
 
-        > .icon svg {
-          transform: scale(0.8);
-          height: 110%;
+        &:hover {
+          opacity: 1;
         }
       }
     }
@@ -456,6 +478,21 @@ section {
 
       > section.details__content {
         grid-area: details;
+
+        ul {
+          li {
+            display: flex;
+            align-items: center;
+            margin-bottom: 3rem;
+
+            > svg { 
+              transform: scale(.9);
+              width: 50px;
+              margin-left: -10px;
+              margin-right: 1rem;
+            }
+          }
+        }
       }
     }
   }
@@ -487,6 +524,8 @@ form {
     margin-bottom: 3rem;
     position: relative;
 
+    border-bottom: 2px solid var(--light-bg-text);
+
     > input[type='text'] {
       z-index: 5;
       padding: var(--input-padding);
@@ -494,12 +533,13 @@ form {
       background: none;
       width: 100%;
       border: none;
-      border-bottom: 2px dotted var(--accent);
       outline: 0;
 
       transition: color .2s ease;
        
       ~ label {
+        color: var(--light-bg-text);
+
         position: absolute;
         z-index: 0;
 
