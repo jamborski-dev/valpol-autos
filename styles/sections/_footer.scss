@@ -1,0 +1,9 @@
+.footer {
+  max-width: var(--max-width);
+  margin: 0 auto;
+
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  column-gap: 5rem;
+  padding-bottom: 3rem;
+}

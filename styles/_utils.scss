@@ -1,0 +1,26 @@
+.icon {
+  --size: 30px;
+  width: var(--size);
+  height: var(--size);
+
+  fill: var(--accent);
+  stroke: none;
+}
+
+.bold {
+  font-weight: 700;
+}
+
+.no-break {
+  white-space: nowrap;
+}
+
+.color-accent {
+  color: var(--accent);
+}
+
+.title {
+  font-weight: 400;
+  margin-top: 1rem;
+  margin-bottom: 2rem;
+}

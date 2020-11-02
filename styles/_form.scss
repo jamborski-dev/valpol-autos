@@ -1,0 +1,46 @@
+$input-padding: 1rem 0;
+
+.form {
+  max-width: 100%;
+  margin: 0 auto;
+}
+.form-group {
+  display: flex;
+  flex-flow: row nowrap;
+  align-items: center;
+
+  margin-bottom: 3rem;
+  position: relative;
+
+  border-bottom: 2px solid var(--light-bg-text);
+}
+
+.form__input {
+  z-index: 5;
+  padding: $input-padding;
+  color: var(--dark-bg-text);
+  background: none;
+  width: 100%;
+  border: none;
+  outline: 0;
+
+  transition: color 0.2s ease;
+
+  ~ .form__label {
+    color: var(--light-bg-text);
+
+    position: absolute;
+    z-index: 0;
+
+    transition: transform 0.2s ease;
+    transform-origin: left;
+  }
+
+  &:focus,
+  &--not-empty {
+    & ~ label {
+      color: var(--accent);
+      transform: translateY(-2rem) scale(0.8);
+    }
+  }
+}

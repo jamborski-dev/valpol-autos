@@ -5,8 +5,8 @@ const inputs = document.querySelectorAll('input');
 inputs.forEach(input => {
   input.addEventListener('change', (e) => {
     e.target.value !== '' 
-      ? e.target.classList.add('not-empty')
-      : e.target.classList.remove('not-empty');
+      ? e.target.classList.add('form__input--not-empty')
+      : e.target.classList.remove('form__input--not-empty');
   })
 })
 
@@ -18,9 +18,9 @@ const onEntry = (entries) => {
   entries.forEach(entry => { 
     const nav = document.getElementById('nav');
     if(entry.isIntersecting) {
-      nav.classList.remove('sticky');
+      nav.classList.remove('nav--sticky');
     } else {
-      nav.classList.add('sticky');  
+      nav.classList.add('nav--sticky');  
     }
   })
 }

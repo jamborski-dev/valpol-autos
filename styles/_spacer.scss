@@ -1,0 +1,34 @@
+$size: 7px;
+
+.spacer {
+  
+  &--center {
+    margin: 0 auto;
+    transform: translateX(-1.5rem);
+  }
+
+  position: relative;
+  border-radius: 50%;
+  background: var(--accent);
+  display: block;
+  width: $size;
+  height: $size;
+
+  &:after,
+  &:before {
+    content: ' ';
+    display: block;
+    position: absolute;
+    background: var(--accent);
+    border-radius: 50%;
+    width: $size;
+    height: $size;
+  }
+
+  &:before {
+    left: 3rem;
+  }
+  &:after {
+    left: 1.5rem;
+  }
+}
