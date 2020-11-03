@@ -1,25 +1,15 @@
-// TODO - refactor files
-// 
-// | - sections
-//    | - _bussiness
-//    | - _hero
-//    | - _reviews
-//    | - _services
-// 
-
 @import 'base';
 @import 'utils';
-@import 'nav';
+
 @import 'form';
 @import 'button';
 @import 'spacer';
 
-@import 'sections/hero';
-@import 'sections/bussiness';
-@import 'sections/services';
-@import 'sections/reviews';
-@import 'sections/contact';
-@import 'sections/footer';
+@import 'nav';
+@import 'hero';
+@import 'sections';
+@import 'contact';
+@import 'footer';
 
 
 h1 {

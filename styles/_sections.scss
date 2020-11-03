@@ -1,0 +1,137 @@
+.section {
+  background: var(--light-bg);
+  color: var(--light-bg-text);
+}
+
+.section--dark {
+  background: var(--dark-bg);
+  color: var(--dark-bg-text);
+}
+
+.title--xl {
+}
+.title--lg {
+  text-align: center;
+  margin-top: 4rem;
+  margin-bottom: 10rem;
+}
+.title--md {
+}
+.title--sm {
+  font-size: 1.25rem;
+}
+
+.content {
+  max-width: var(--max-width);
+  // max-width: 90%;
+  margin: 0 auto;
+  padding-bottom: 0;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.services {
+  > .content {
+    max-width: 90%;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding-bottom: 0;
+
+    .cols {
+      display: flex;
+      flex-direction: row;
+      justify-content: space-evenly;
+      align-items: flex-start;
+
+      .col {
+        width: 33.33%;
+        padding: 3rem;
+        padding-bottom: 0;
+        text-align: center;
+
+        h4 {
+          font-size: 1.25rem;
+          color: var(--dark-bg-header);
+        }
+
+        p {
+          color: var(--dark-bg-text);
+        }
+      }
+    }
+  }
+}
+
+.reviews-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 1fr 1fr;
+  justify-items: center;
+  gap: 5rem;
+}
+
+.review-container {
+  --avatar-size: 60px;
+
+  max-width: 500px;
+  display: grid;
+  gap: 1rem;
+  grid-template-rows: var(--avatar-size) auto;
+  grid-template-columns: var(--avatar-size) auto;
+  grid-template-areas:
+    'avatar header'
+    'content content';
+}
+
+.avatar__container {
+  grid-area: avatar;
+  border-radius: 50%;
+  overflow: hidden;
+}
+
+.avatar__img {
+  width: 100%;
+}
+
+.review__header {
+  grid-area: header;
+
+  display: grid;
+  grid-template-rows: 1fr 1fr;
+  align-items: center;
+  font-size: 1.5rem;
+  color: var(--light-bg-header);
+}
+
+.review__meta {
+  font-size: 0.8rem;
+  color: var(--light-bg-text);
+
+  display: flex;
+  justify-content: space-between;
+}
+
+.review__content {
+  grid-area: content;
+  margin-top: 0.75rem;
+}
+
+.img-container {
+  margin-left: 5rem;
+  width: 400px;
+  height: 400px;
+  border-radius: 50%;
+  overflow: hidden;
+  box-shadow: 0 20px 100px rgba(0, 0, 0, 0.2);
+
+  img {
+    width: 120%;
+    transform: translate(-16%, -48%);
+  }
+}
