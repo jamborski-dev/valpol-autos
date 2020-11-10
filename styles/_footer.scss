@@ -6,4 +6,9 @@
   grid-template-columns: 1fr 1fr;
   column-gap: 5rem;
   padding-bottom: 3rem;
+
+  @media screen and (max-width: 570px) {
+    grid-template-columns: 1fr;
+    grid-template-rows: repeat(2, 1fr);
+  }
 }

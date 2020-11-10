@@ -1,10 +1,14 @@
 .icon {
-  --size: 30px;
+  --size: 2rem;
   width: var(--size);
   height: var(--size);
 
   fill: var(--accent);
   stroke: none;
+
+  &--lg {
+    --size: 3rem;
+  }
 }
 
 .bold {
