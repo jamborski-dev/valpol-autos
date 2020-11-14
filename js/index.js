@@ -1,3 +1,19 @@
+const hamburger = document.querySelector('#hamburger-icon');
+const nav = document.getElementById('nav');
+const navLinks = document.querySelectorAll('.nav__link');
+navLinks.forEach(navLink => {
+  navLink.addEventListener('click', () => {
+    nav.classList.add('nav--close');
+  })
+})
+
+hamburger.addEventListener('click', (e) => {
+  e.currentTarget.classList.toggle('hamburger__container--close');
+  nav.classList.toggle('nav--close');
+});
+
+
+
 // Hanling Inputs
 
 const inputs = document.querySelectorAll('input');
@@ -21,7 +37,6 @@ const onEntry = entries => {
   entries.forEach(entry => {
     
     // observe navigation bar
-    const nav = document.getElementById('nav');
     if (entry.isIntersecting && entry.target.id === 'home') {
       nav.classList.remove('nav--sticky');
     } else if (!entry.isIntersecting && entry.target.id === 'home') {

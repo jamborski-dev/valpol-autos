@@ -1,0 +1,22 @@
+{
+  "name": "y",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "sass": "node-sass --watch styles -o styles"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/jamborski-dev/valpol-autos.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/jamborski-dev/valpol-autos/issues"
+  },
+  "homepage": "https://github.com/jamborski-dev/valpol-autos#readme",
+  "dependencies": {
+    "node-sass": "^5.0.0"
+  }
+}
