@@ -4,7 +4,8 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "sass": "node-sass --watch styles -o styles"
+    "sass": "node-sass --watch public/styles -o public/styles",
+    "dev": "nodemon index.js"
   },
   "repository": {
     "type": "git",
@@ -17,6 +18,10 @@
   },
   "homepage": "https://github.com/jamborski-dev/valpol-autos#readme",
   "dependencies": {
-    "node-sass": "^5.0.0"
+    "@sendgrid/mail": "^7.4.0",
+    "dotenv": "^8.2.0",
+    "express": "^4.17.1",
+    "node-sass": "^5.0.0",
+    "nodemon": "^2.0.6"
   }
 }

@@ -307,24 +307,24 @@
             <small>Wycena w ciągu 24h</small>
           </header>
           <section class="form__container">
-            <form method="post" class='form' autocomplete="off">
+            <form method="post" action="/" class='form' autocomplete="off">
               <div class="form-group">
-                <input class="form__input" type="text" name="name" id="" />
+                <input class="form__input" type="text" name="name" id="name" required autocomplete="off"/>
                 <label class="form__label" for="name">Imię</label>
               </div>
               <div class="form-group">
-                <input class="form__input" type="text" name="phone" id="" />
+                <input class="form__input" type="text" name="phone" id="phone" required autocomplete="off"/>
                 <label class="form__label" for="phone">Telefon kontaktowy</label>
               </div>
               <div class="form-group">
-                <input class="form__input" type="text" name="email" id="" />
+                <input class="form__input" type="text" name="email" id="email" required autocomplete="off"/>
                 <label class="form__label"for="email">Adres email</label>
               </div>
               <div class="form-group">
-                <input class="form__input" type="text" name="message" id="message" />
-                <label class="form__label" for="message">Treść wiadomości</label>
+                <input class="form__input" type="text" name="msg" id="msg" required autocomplete="off"/>
+                <label class="form__label" for="msg">Treść wiadomości</label>
               </div>
-              <input type="button" class="btn" value="Wyślij zapytanie" />
+              <input type="submit" class="btn" value="Wyślij zapytanie" />
             </form>
           </section>
           <header class="details__header">

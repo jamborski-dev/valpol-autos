@@ -4,14 +4,14 @@ const navLinks = document.querySelectorAll('.nav__link');
 navLinks.forEach(navLink => {
   navLink.addEventListener('click', () => {
     nav.classList.add('nav--close');
+    hamburger.classList.remove('hamburger__container--close');
   })
 })
 
-hamburger.addEventListener('click', (e) => {
-  e.currentTarget.classList.toggle('hamburger__container--close');
+hamburger.addEventListener('click', () => {
+  hamburger.classList.toggle('hamburger__container--close');
   nav.classList.toggle('nav--close');
 });
-
 
 
 // Hanling Inputs
