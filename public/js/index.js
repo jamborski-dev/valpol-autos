@@ -76,8 +76,5 @@ const observerNav = new IntersectionObserver(onEntry, navConfig);
 const observerMenuItems = new IntersectionObserver(onEntryItems, menuItemsConfig);
 
 observerNav.observe(hero);
-observerMenuItems.observe(hero);
-observerMenuItems.observe(bussiness);
-observerMenuItems.observe(services);
-observerMenuItems.observe(reviews);
-observerMenuItems.observe(contact);
+
+[hero, bussiness, services, reviews, contact].map(section => observerMenuItems.observe(section));
