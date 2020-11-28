@@ -1,3 +1,8 @@
+const isFormSubmitted = sessionStorage.getItem('isFormSubmitted') || null;
+const formResult = sessionStorage.getItem('formResult') || null;
+
+isFormSubmitted ? console.log(fromResult.value) : console.log('No message was sent yet');
+
 const hamburger = document.querySelector('#hamburger-icon');
 const nav = document.getElementById('nav');
 const navLinks = document.querySelectorAll('.nav__link');
