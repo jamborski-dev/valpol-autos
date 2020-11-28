@@ -1,3 +1,11 @@
+exports.handler = function(event, context, callback) {
+  callback(null, {
+    statusCode: 200,
+    body: "Hello, World"
+  });
+};
+
+
 // require('dotenv').config();
 // const express = require('express');
 // const app = express();
