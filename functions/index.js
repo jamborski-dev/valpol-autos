@@ -1,6 +1,8 @@
 const sgMail = require('@sendgrid/mail');
 
 exports.handler = async function(event, context, callback) {
+
+  console.log('hi i am serveless!');
   const { name, msg, phone, email } = JSON.parse(event.body).payload;
 
   console.log(JSON.stringify(context, null, 2));
