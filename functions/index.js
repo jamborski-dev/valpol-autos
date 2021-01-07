@@ -1,16 +1,44 @@
-exports.handler = function(event, context, callback) {
-  callback(null, {
-    statusCode: 200,
-    body: "Hello, World"
-  });
-};
+const sgMail = require('@sendgrid/mail');
 
+exports.handler = async function(event, context, callback) {
+  const { name, msg, phone, email } = JSON.parse(event.body).payload;
 
-// require('dotenv').config();
+  console.log(JSON.stringify(context, null, 2));
+
+  sgMail.setApiKey(process.env.SENDGRID_API_KEY);
+  msgConfig = {
+    to: process.env.EMAIL_TO,
+    from: email,
+    subject: `You have a new enquiry from ${name}`,
+    html: `
+      <h3>${name} sent you an enquiry on ${dateFormated}<h3>
+      <blockquote>${msg}</blockquote>
+      <br>
+      <p>Phone <strong>${phone}<strong></p>
+      <p>Email <strong>${email}<strong></p>
+    `
+  };
+  sgMail
+    .send(msgConfig)
+    .then(() => {
+      callback(null, {
+        statusCode: 200,
+        body: "Beep, boop, you just got serverless."
+      })
+    })
+    .catch(err => {
+      callback(null, {
+        statusCode: 403,
+        body: "There was an error ; c"
+      })
+      console.error(err);
+    });
+  }
+
+  
 // const express = require('express');
 // const app = express();
 
-// const sgMail = require('@sendgrid/mail');
 
 // app.use(express.static('public'));
 // app.use(express.urlencoded({ extended: true }));
@@ -28,38 +56,6 @@ exports.handler = function(event, context, callback) {
 //   const date = new Date();
 //   const dateFormated = `${date.getDate()}.${date.getMonth()+1}.${date.getFullYear()}`;
   
-//   sgMail.setApiKey(process.env.SENDGRID_API_KEY);
-//   msgConfig = {
-//     to: process.env.EMAIL_TO,
-//     from: email,
-//     subject: `You have a new enquiry from ${name}`,
-//     html: `
-//       <h3>${name} sent you an enquiry on ${dateFormated}<h3>
-//       <blockquote>${msg}</blockquote>
-//       <br>
-//       <p>Phone <strong>${phone}<strong></p>
-//       <p>Email <strong>${email}<strong></p>
-//     `
-//   };
-//   sgMail
-//     .send(msgConfig)
-//     .then(() => {
-//       console.log('Email sent with a success');
-//       // session.setItem('isFormSubmitted', true);
-//       // session.setItem('formResult', 'success');
-//       // setTimeout(() => {
-//       //   session.clear();
-//       // }, 5000);
-//       res.redirect('/');
-//     })
-//     .catch(err => {
-//       // session.setItem('isFormSubmitted', true);
-//       // session.setItem('formResult', 'error');
-//       // setTimeout(() => {
-//       //   session.clear();
-//       // }, 5000);
-//       console.error(err);
-//     });
 // })
 
 // const port = process.env.PORT || 8070;
