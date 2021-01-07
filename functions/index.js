@@ -3,38 +3,38 @@ const sgMail = require('@sendgrid/mail');
 exports.handler = async function(event, context, callback) {
 
   console.log('hi i am serveless!');
-  const { name, msg, phone, email } = JSON.parse(event.body).payload;
+  // const { name, msg, phone, email } = JSON.parse(event.body).payload;
 
-  console.log(JSON.stringify(context, null, 2));
+  // console.log(JSON.stringify(context, null, 2));
 
-  sgMail.setApiKey(process.env.SENDGRID_API_KEY);
-  msgConfig = {
-    to: process.env.EMAIL_TO,
-    from: email,
-    subject: `You have a new enquiry from ${name}`,
-    html: `
-      <h3>${name} sent you an enquiry on ${dateFormated}<h3>
-      <blockquote>${msg}</blockquote>
-      <br>
-      <p>Phone <strong>${phone}<strong></p>
-      <p>Email <strong>${email}<strong></p>
-    `
-  };
-  sgMail
-    .send(msgConfig)
-    .then(() => {
-      callback(null, {
-        statusCode: 200,
-        body: "Beep, boop, you just got serverless."
-      })
-    })
-    .catch(err => {
-      callback(null, {
-        statusCode: 403,
-        body: "There was an error ; c"
-      })
-      console.error(err);
-    });
+  // sgMail.setApiKey(process.env.SENDGRID_API_KEY);
+  // msgConfig = {
+  //   to: process.env.EMAIL_TO,
+  //   from: email,
+  //   subject: `You have a new enquiry from ${name}`,
+  //   html: `
+  //     <h3>${name} sent you an enquiry on ${dateFormated}<h3>
+  //     <blockquote>${msg}</blockquote>
+  //     <br>
+  //     <p>Phone <strong>${phone}<strong></p>
+  //     <p>Email <strong>${email}<strong></p>
+  //   `
+  // };
+  // sgMail
+  //   .send(msgConfig)
+  //   .then(() => {
+  //     callback(null, {
+  //       statusCode: 200,
+  //       body: "Beep, boop, you just got serverless."
+  //     })
+  //   })
+  //   .catch(err => {
+  //     callback(null, {
+  //       statusCode: 403,
+  //       body: "There was an error ; c"
+  //     })
+  //     console.error(err);
+  //   });
   }
 
   
